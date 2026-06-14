@@ -1,0 +1,32 @@
+# =============================================================================
+#  Dépôt Portfolio — on ne versionne QUE le thème personnalisé.
+#  Le core WordPress, les autres thèmes et les extensions ne sont pas suivis
+#  (ils restent présents sur le disque pour faire tourner le site en local).
+# =============================================================================
+
+# 1) Ignorer tout par défaut...
+/*
+
+# 2) ...sauf les méta-fichiers du dépôt et la configuration des outils
+!/.gitignore
+!/.editorconfig
+!/.prettierrc.json
+!/.prettierignore
+!/.stylelintrc.json
+!/package.json
+!/README.md
+
+# 3) ...et l'arborescence du thème personnalisé
+!/wp-content
+/wp-content/*
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/portfolio
+
+# 4) Dépendances et artefacts générés
+node_modules/
+wp-content/themes/portfolio/*.log
+.DS_Store
+Thumbs.db
+*.swp
+*~

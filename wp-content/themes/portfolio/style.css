@@ -11,3 +11,108 @@ License URI: https://www.gnu.org/licenses/gpl.html
 Tags: portfolio, projet, cv
 Text Domain: portfolio
 */
+
+/* ==========================================================================
+   Variables — palette & échelle typographique
+   ==========================================================================
+   Centralise les valeurs réutilisables du thème. La majeure partie de la mise
+   en page provient d'Elementor ; ces réglages servent de base cohérente.
+   ========================================================================== */
+
+:root {
+  /* Couleurs */
+  --color-dark: #1a1a1a;
+  --color-dark-hover: #444444;
+  --color-light: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+
+  /* Typographie */
+  --line-height-base: 1.6;
+
+  /* Espacements & rayons */
+  --spacing: 1.5rem;
+  --radius-round: 50%;
+}
+
+/* ==========================================================================
+   Base — lisibilité du corps de texte
+   ========================================================================== */
+
+body {
+  line-height: var(--line-height-base);
+}
+
+/* ==========================================================================
+   Bouton « retour en haut »
+   ========================================================================== */
+
+#scroll-top {
+  position: fixed;
+  right: var(--spacing);
+  bottom: var(--spacing);
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+
+  font-size: 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border: none;
+  border-radius: var(--radius-round);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  cursor: pointer;
+
+  /* Caché par défaut, révélé via la classe .is-visible (JS) */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Sans JavaScript, le bouton reste masqué (attribut hidden dans footer.php). */
+#scroll-top[hidden] {
+  display: none;
+}
+
+#scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scroll-top:hover {
+  background-color: var(--color-dark-hover);
+}
+
+/* Anneau de focus visible uniquement au clavier (accessibilité). */
+#scroll-top:focus-visible {
+  outline: 2px solid var(--color-light);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  #scroll-top {
+    right: 1rem;
+    bottom: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Respect de la préférence « mouvement réduit ». */
+@media (prefers-reduced-motion: reduce) {
+  #scroll-top {
+    transition: opacity 0.25s ease, visibility 0.25s ease,
+      background-color 0.25s ease;
+    transform: none;
+  }
+}
