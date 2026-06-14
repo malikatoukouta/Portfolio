@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio d'Abdourmalik Adamou, développeur web spécialisé WordPress, à la recherche d'une alternance."
+    />
+    <meta name="author" content="Abdourmalik Adamou" />
+
+    <!-- Open Graph (partage sur les réseaux) -->
+    <meta property="og:title" content="Abdourmalik Adamou — Développeur Web" />
+    <meta
+      property="og:description"
+      content="Développeur web spécialisé WordPress, à la recherche d'une alternance."
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Abdourmalik Adamou — Développeur Web</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Lien d'évitement (accessibilité clavier) -->
+    <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+    <!-- ============================ EN-TÊTE ============================ -->
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Retour en haut">
+          <span class="brand__mark">AA</span>
+          <span class="brand__name">Abdourmalik Adamou</span>
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale">
+          <button
+            class="nav__toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Ouvrir le menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav__menu" id="nav-menu">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================ HÉRO ============================ -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <p class="hero__eyebrow reveal">Bonjour, je suis</p>
+          <h1 class="hero__title reveal">Abdourmalik Adamou</h1>
+          <p class="hero__subtitle reveal">
+            Développeur Web <span class="accent">·</span> Spécialisé WordPress
+          </p>
+          <p class="hero__lead reveal">
+            À la recherche d'une <strong>alternance</strong> pour approfondir mes
+            compétences et évoluer vers une licence ou un bachelor.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#projects">Voir mes projets</a>
+            <a class="btn btn--ghost" href="#contact">Me contacter</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ À PROPOS ============================ -->
+      <section class="section" id="about">
+        <div class="container">
+          <h2 class="section__title reveal">À propos</h2>
+          <div class="about reveal">
+            <p>
+              Titulaire d'un <strong>titre RNCP niveau 5 (équivalent Bac+2)</strong>
+              en développement web spécialisé WordPress. Passionné par la création
+              de sites modernes et performants, je recherche une alternance pour
+              approfondir mes compétences et évoluer vers une licence ou un
+              bachelor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ COMPÉTENCES ============================ -->
+      <section class="section section--alt" id="skills">
+        <div class="container">
+          <h2 class="section__title reveal">Compétences</h2>
+          <ul class="skills reveal" role="list">
+            <li class="skill">WordPress</li>
+            <li class="skill">HTML</li>
+            <li class="skill">CSS</li>
+            <li class="skill">PHP</li>
+            <li class="skill">JavaScript</li>
+            <li class="skill">React</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ PROJETS ============================ -->
+      <section class="section" id="projects">
+        <div class="container">
+          <h2 class="section__title reveal">Projets</h2>
+          <p class="section__lead reveal">
+            Retrouvez l'ensemble de mes réalisations sur mon GitHub et mon
+            portfolio WordPress.
+          </p>
+
+          <div class="cards">
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">&lt;/&gt;</div>
+              <h3 class="card__title">Mon GitHub</h3>
+              <p class="card__text">
+                Le code de mes projets, mes expérimentations et mes contributions.
+              </p>
+              <a
+                class="card__link"
+                href="https://github.com/malikatoukouta"
+                target="_blank"
+                rel="noopener"
+                >Voir le profil →</a
+              >
+            </article>
+
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">★</div>
+              <h3 class="card__title">Portfolio WordPress</h3>
+              <p class="card__text">
+                Mon portfolio réalisé sous WordPress, avec le détail de mes
+                projets et de mon parcours.
+              </p>
+              <!-- TODO: remplacer # par l'URL une fois le site WordPress en ligne -->
+              <a class="card__link" href="#" aria-disabled="true"
+                >Bientôt en ligne →</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ CONTACT ============================ -->
+      <section class="section section--alt" id="contact">
+        <div class="container contact">
+          <h2 class="section__title reveal">Contact</h2>
+          <p class="section__lead reveal">
+            Une alternance, une question, une collaboration ? Écrivez-moi.
+          </p>
+          <a class="btn btn--primary reveal" href="mailto:abdourmalik@gmail.com"
+            >abdourmalik@gmail.com</a
+          >
+          <p class="contact__note reveal">
+            Plus d'informations sur la page contact de mon portfolio WordPress.
+          </p>
+          <ul class="socials reveal" role="list">
+            <li>
+              <a
+                href="https://github.com/malikatoukouta"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="mailto:abdourmalik@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ PIED DE PAGE ============================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> Abdourmalik Adamou — Développeur Web
+          spécialisé WordPress.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button
+      type="button"
+      id="scroll-top"
+      aria-label="Revenir en haut de la page"
+      hidden
+    >
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

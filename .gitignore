@@ -1,0 +1,18 @@
+# Cette branche ne contient QUE le portfolio codé (HTML/CSS/JS).
+# Les fichiers WordPress présents sur le disque sont ignorés.
+
+# 1) Ignorer tout par défaut...
+/*
+
+# 2) ...sauf les fichiers du portfolio perso
+!/.gitignore
+!/index.html
+!/README.md
+!/css
+!/js
+!/assets
+
+# 3) Artefacts système
+.DS_Store
+Thumbs.db
+*.log
