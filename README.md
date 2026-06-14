@@ -4,6 +4,12 @@ Site portfolio développé sous **WordPress** dans le cadre d'un projet de
 formation OpenClassrooms. Le site présente un profil, des compétences et des
 projets, avec un thème enfant personnalisé basé sur **Twenty Twenty-One**.
 
+🔗 **Site en ligne :** _à compléter_ <!-- Remplacer par l'URL du site déployé -->
+
+## 🖼️ Aperçu
+
+![Aperçu du thème Portfolio](wp-content/themes/portfolio/screenshot.png)
+
 ## 🧱 Stack technique
 
 - **WordPress** (core)
@@ -23,12 +29,23 @@ Le thème personnalisé se trouve dans :
 
 ```
 wp-content/themes/portfolio/
-├── functions.php       # Chargement du style et du script du thème enfant
-├── style.css           # Styles personnalisés (dont le bouton « retour en haut »)
+├── functions.php       # i18n + chargement du style et du script du thème enfant
+├── style.css           # Styles personnalisés (variables, bouton « retour en haut »)
 ├── footer.php          # Pied de page + bouton de retour en haut
 ├── js/
 │   └── scroll-top.js   # Comportement du bouton « retour en haut »
 └── screenshot.png
+```
+
+## 🧹 Qualité de code
+
+Des outils de formatage et de lint sont configurés à la racine du dépôt
+(`.editorconfig`, `.prettierrc.json`, `.stylelintrc.json`) :
+
+```bash
+npm install        # installe Prettier et Stylelint
+npm run format     # formate le JS/CSS du thème
+npm run lint:css   # vérifie le CSS du thème
 ```
 
 ## 🚀 Installation locale

@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-theme",
+  "version": "1.0.0",
+  "description": "Outils de qualité de code pour le thème WordPress Portfolio.",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "format": "prettier --write \"wp-content/themes/portfolio/**/*.{js,css}\"",
+    "format:check": "prettier --check \"wp-content/themes/portfolio/**/*.{js,css}\"",
+    "lint:css": "stylelint \"wp-content/themes/portfolio/**/*.css\""
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0",
+    "stylelint": "^16.6.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

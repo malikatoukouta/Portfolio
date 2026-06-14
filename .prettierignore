@@ -1,0 +1,8 @@
+node_modules/
+# Le core WordPress et les extensions ne sont pas formatés par ce dépôt.
+wp-admin/
+wp-includes/
+wp-content/plugins/
+wp-content/themes/twentytwentyone/
+*.min.js
+*.min.css

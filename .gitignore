@@ -7,16 +7,24 @@
 # 1) Ignorer tout par défaut...
 /*
 
-# 2) ...sauf les méta-fichiers du dépôt et l'arborescence du thème
+# 2) ...sauf les méta-fichiers du dépôt et la configuration des outils
 !/.gitignore
+!/.editorconfig
+!/.prettierrc.json
+!/.prettierignore
+!/.stylelintrc.json
+!/package.json
 !/README.md
+
+# 3) ...et l'arborescence du thème personnalisé
 !/wp-content
 /wp-content/*
 !/wp-content/themes
 /wp-content/themes/*
 !/wp-content/themes/portfolio
 
-# 3) À l'intérieur du thème, exclure les artefacts générés / système
+# 4) Dépendances et artefacts générés
+node_modules/
 wp-content/themes/portfolio/*.log
 .DS_Store
 Thumbs.db
