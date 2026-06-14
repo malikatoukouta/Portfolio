@@ -1,18 +1,23 @@
-# WordPress — configuration sensible (identifiants DB, clés/salts)
-wp-config.php
+# =============================================================================
+#  Dépôt Portfolio — on ne versionne QUE le thème personnalisé.
+#  Le core WordPress, les autres thèmes et les extensions ne sont pas suivis
+#  (ils restent présents sur le disque pour faire tourner le site en local).
+# =============================================================================
 
-# Contenu généré / téléversé
-wp-content/uploads/
-wp-content/upgrade/
-wp-content/cache/
-wp-content/backups/
+# 1) Ignorer tout par défaut...
+/*
 
-# Logs et fichiers de debug
-*.log
-debug.log
-wp-content/debug.log
+# 2) ...sauf les méta-fichiers du dépôt et l'arborescence du thème
+!/.gitignore
+!/README.md
+!/wp-content
+/wp-content/*
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/portfolio
 
-# Fichiers système
+# 3) À l'intérieur du thème, exclure les artefacts générés / système
+wp-content/themes/portfolio/*.log
 .DS_Store
 Thumbs.db
 *.swp
