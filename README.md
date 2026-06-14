@@ -4,7 +4,8 @@ Site portfolio développé sous **WordPress** dans le cadre d'un projet de
 formation OpenClassrooms. Le site présente un profil, des compétences et des
 projets, avec un thème enfant personnalisé basé sur **Twenty Twenty-One**.
 
-🔗 **Site en ligne :** _à compléter_ <!-- Remplacer par l'URL du site déployé -->
+> ℹ️ Projet exécuté en **local** (environnement de développement). Voir la
+> section [Installation locale](#-installation-locale) pour le lancer.
 
 ## 🖼️ Aperçu
 
