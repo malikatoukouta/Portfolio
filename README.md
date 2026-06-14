@@ -30,10 +30,11 @@ Le thème personnalisé se trouve dans :
 
 ```
 wp-content/themes/portfolio/
-├── functions.php       # i18n, enqueue style/script, injection du bouton (hook wp_footer)
-├── style.css           # Styles personnalisés (variables, bouton « retour en haut »)
+├── functions.php       # i18n, enqueue styles/scripts, injection du bouton (hook wp_footer)
+├── style.css           # Variables, finitions globales, animations, bouton « retour en haut »
 ├── js/
-│   └── scroll-top.js   # Comportement du bouton « retour en haut »
+│   ├── scroll-top.js   # Comportement du bouton « retour en haut »
+│   └── reveal.js       # Apparition au défilement (classe « reveal »)
 └── screenshot.png
 ```
 
@@ -47,6 +48,28 @@ npm install        # installe Prettier et Stylelint
 npm run format     # formate le JS/CSS du thème
 npm run lint:css   # vérifie le CSS du thème
 ```
+
+## 🎨 Personnalisation du design
+
+La mise en page principale (sections, cartes projets, en-tête/pied) est construite
+avec **Elementor** et s'édite **dans l'admin WordPress**, pas dans les fichiers du
+dépôt. Le thème fournit néanmoins une base de style et deux aides réutilisables.
+
+### Couleurs & typographie globales
+
+- **Côté thème** : ajuste les variables en haut de `style.css` (bloc `:root`),
+  notamment `--color-accent` (liens, focus, sélection de texte).
+- **Côté Elementor** : menu ☰ → **Réglages du site** → **Couleurs globales** et
+  **Polices globales** pour définir la charte appliquée à tout le site.
+
+### Animation « apparition au défilement »
+
+Pour faire apparaître un élément en fondu montant quand il entre à l'écran :
+
+1. Dans Elementor, sélectionne le widget ou la section.
+2. Onglet **Avancé** → champ **Classes CSS** → saisis `reveal`.
+3. Enregistre. Le script `reveal.js` s'occupe de l'animation (et la désactive
+   automatiquement si l'utilisateur préfère un mouvement réduit).
 
 ## 🚀 Installation locale
 
