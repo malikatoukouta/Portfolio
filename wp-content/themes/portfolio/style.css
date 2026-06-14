@@ -26,20 +26,86 @@ Text Domain: portfolio
   --color-light: #ffffff;
   --color-shadow: rgba(0, 0, 0, 0.25);
 
+  /* Couleur d'accent (liens, focus). Ajuste-la à ta charte Elementor. */
+  --color-accent: #2563eb;
+
   /* Typographie */
   --line-height-base: 1.6;
 
   /* Espacements & rayons */
   --spacing: 1.5rem;
   --radius-round: 50%;
+
+  /* Transitions */
+  --transition: 0.2s ease;
 }
 
 /* ==========================================================================
-   Base — lisibilité du corps de texte
+   Base — lisibilité & finitions globales
+   ==========================================================================
+   Réglages discrets qui améliorent le rendu partout, y compris hors blocs
+   Elementor. Ils restent volontairement neutres pour ne pas écraser la charte
+   définie dans l'éditeur Elementor.
    ========================================================================== */
 
 body {
   line-height: var(--line-height-base);
+  /* Rendu des polices plus net sur écrans haute densité. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Évite les débordements horizontaux dus à de longs mots / URLs. */
+  overflow-wrap: break-word;
+}
+
+/* Défilement fluide pour les ancres internes (#section). */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Médias fluides : jamais plus larges que leur conteneur. */
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Couleur de surlignage de la sélection de texte. */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+}
+
+/* Transition douce sur les liens (la couleur reste celle d'Elementor). */
+a {
+  transition: color var(--transition), opacity var(--transition);
+}
+
+/* Anneau de focus clavier global, cohérent et accessible. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Utilitaire d'animation — apparition au défilement
+   ==========================================================================
+   Ajoute la classe « reveal » à un widget Elementor (Avancé > CSS Classes)
+   pour qu'il apparaisse en fondu montant quand il entre dans l'écran.
+   Le script reveal.js ajoute « is-revealed » au bon moment.
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: none;
 }
 
 /* ==========================================================================
@@ -110,9 +176,20 @@ body {
 
 /* Respect de la préférence « mouvement réduit ». */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   #scroll-top {
     transition: opacity 0.25s ease, visibility 0.25s ease,
       background-color 0.25s ease;
     transform: none;
+  }
+
+  /* Les éléments « reveal » sont visibles d'emblée, sans animation. */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

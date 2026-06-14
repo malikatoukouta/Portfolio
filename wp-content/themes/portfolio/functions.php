@@ -45,6 +45,14 @@ function theme_enqueue_style()
     $version,
     true
   );
+
+  wp_enqueue_script(
+    'theme-reveal',
+    get_stylesheet_directory_uri() . '/js/reveal.js',
+    array(),
+    $version,
+    true
+  );
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_style');
 
