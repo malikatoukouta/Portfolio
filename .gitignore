@@ -1,0 +1,19 @@
+# WordPress — configuration sensible (identifiants DB, clés/salts)
+wp-config.php
+
+# Contenu généré / téléversé
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backups/
+
+# Logs et fichiers de debug
+*.log
+debug.log
+wp-content/debug.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.swp
+*~
