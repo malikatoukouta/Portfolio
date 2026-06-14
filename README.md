@@ -30,9 +30,8 @@ Le thème personnalisé se trouve dans :
 
 ```
 wp-content/themes/portfolio/
-├── functions.php       # i18n + chargement du style et du script du thème enfant
+├── functions.php       # i18n, enqueue style/script, injection du bouton (hook wp_footer)
 ├── style.css           # Styles personnalisés (variables, bouton « retour en haut »)
-├── footer.php          # Pied de page + bouton de retour en haut
 ├── js/
 │   └── scroll-top.js   # Comportement du bouton « retour en haut »
 └── screenshot.png

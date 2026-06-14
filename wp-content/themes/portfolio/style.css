@@ -26,18 +26,12 @@ Text Domain: portfolio
   --color-light: #ffffff;
   --color-shadow: rgba(0, 0, 0, 0.25);
 
-  /* Échelle typographique (base 1rem = 16px) */
-  --font-size-base: 1rem;
-  --font-size-sm: 0.875rem;
-  --font-size-lg: 1.25rem;
+  /* Typographie */
   --line-height-base: 1.6;
 
   /* Espacements & rayons */
   --spacing: 1.5rem;
   --radius-round: 50%;
-
-  /* Points de rupture (à titre de référence) */
-  --breakpoint-mobile: 600px;
 }
 
 /* ==========================================================================
@@ -54,8 +48,8 @@ body {
 
 #scroll-top {
   position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
+  right: var(--spacing);
+  bottom: var(--spacing);
   z-index: 999;
 
   display: flex;

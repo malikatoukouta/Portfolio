@@ -47,3 +47,24 @@ function theme_enqueue_style()
   );
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_style');
+
+/**
+ * Injecte le bouton « retour en haut » dans le pied de page.
+ *
+ * On passe par le hook wp_footer (et non par un footer.php personnalisé) afin de
+ * ne pas écraser le footer.php du thème parent : son balisage de fermeture et
+ * son pied de page natif restent intacts sur les gabarits classiques, tout en
+ * affichant le bouton sur toutes les pages (y compris celles rendues par
+ * Elementor, où wp_footer() est aussi appelé).
+ *
+ * Le bouton porte l'attribut « hidden » : il n'est révélé que par le script
+ * (amélioration progressive), évitant un bouton inerte si JavaScript est inactif.
+ */
+function portfolio_scroll_top_button()
+{
+  echo '<button type="button" id="scroll-top" aria-label="' . esc_attr__('Revenir en haut de la page', 'portfolio') . '" hidden>';
+  echo '<span aria-hidden="true">&uarr;</span>';
+  echo '</button>';
+}
+add_action('wp_footer', 'portfolio_scroll_top_button');
+
